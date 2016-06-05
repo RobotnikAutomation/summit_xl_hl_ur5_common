@@ -8,11 +8,11 @@
 	
 	<!-- First we import all posible elements defined in the urdf.xacro files. All these elements are defined as macro:xacros -->
 
-	<!-- Import summit XL base elements -->
+	<!-- Import summit XL HL base elements -->
 	<xacro:include filename="$(find summit_xl_hl_ur5_description)/urdf/summit_xl_hl_ur5_base.urdf.xacro" />
   
 	<!-- Import summit XL wheels -->
-	<xacro:include filename="$(find summit_xl_description)/urdf/wheels/rubber_wheel.urdf.xacro" />
+	<xacro:include filename="$(find summit_xl_hl_ur5_description)/urdf/rubber_wheel.urdf.xacro" />
     
 	<!-- Import all available sensors -->
 	<xacro:include filename="$(find robotnik_sensors)/urdf/all_sensors.urdf.xacro" />
