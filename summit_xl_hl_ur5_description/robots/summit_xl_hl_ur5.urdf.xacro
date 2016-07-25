@@ -79,25 +79,36 @@
     <!-- Hokuyo laser sensors can be parametized with min_angle and max_angle e.g: -->
     <!--xacro:sensor_hokuyo_utm30lx name="hokuyo_base" parent="base_link" min_angle="2.35" max_angle="-2.35"-->
   
-    <xacro:sensor_hokuyo_ust10lx name="hokuyo_front" parent="base_link">
+    <!--xacro:sensor_hokuyo_ust10lx name="hokuyo_front" parent="base_link">
 		<origin xyz="0.376997 -0.210571 0.218585" rpy="0 0 ${-PI/4}"/>
-	</xacro:sensor_hokuyo_ust10lx>
+	</xacro:sensor_hokuyo_ust10lx-->
 	
-	<xacro:sensor_hokuyo_ust10lx name="hokuyo_rear" parent="base_link">
+	<!--xacro:sensor_hokuyo_ust10lx name="hokuyo_rear" parent="base_link">
 		<origin xyz="-0.376997 0.210571 0.218585" rpy="0 0 ${-PI/4}"/>
-	</xacro:sensor_hokuyo_ust10lx>
+	</xacro:sensor_hokuyo_ust10lx-->
 	
-	<xacro:sensor_axis_m5013 name="camera_front" parent="base_link">
+	<!--xacro:sensor_axis_m5013 name="camera_front" parent="base_link">
 		<origin xyz="0.3085 0.1408 0.208585" rpy="0 ${PI/2} 0"/>
-	</xacro:sensor_axis_m5013>
+	</xacro:sensor_axis_m5013-->
 	
-	<xacro:sensor_axis_m5013 name="camera_rear" parent="base_link">
+	<!--xacro:sensor_axis_m5013 name="camera_rear" parent="base_link">
 		<origin xyz="-0.3085 -0.1408 0.208585" rpy="0 ${-PI/2} 0"/>
-	</xacro:sensor_axis_m5013>
+	</xacro:sensor_axis_m5013-->
   
 	<xacro:sensor_imu name="imu" parent="base_link">
 		<origin xyz="-0.18 0.0 0.170" rpy="0 0 0"/>
 	</xacro:sensor_imu>
+	
+	 <xacro:sensor_gps name="gps" parent="base_link">
+                <origin xyz="-0.39 -0.20 0.570" rpy="0 0 0"/>
+        </xacro:sensor_gps>
+
+        <xacro:sensor_asus_xtion_pro name="primesense" parent="base_link">
+                <origin xyz="0.0 -0.24 0.265" rpy="0 0 ${-PI/2}"/>
+        </xacro:sensor_asus_xtion_pro>
+
+
+
  
   <!-- ARM -->
   <xacro:ur5_robot prefix="arm_" joint_limited="false">
